@@ -30,3 +30,14 @@ exports.search = (req, res) => {
     .then(products => res.send(products))
     .catch(err => res.send(err));
 };
+
+exports.update = (req, res) => {
+  models.products
+    .update(req.body, {
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(result => res.send(result))
+    .catch(err => console.log(err));
+};
