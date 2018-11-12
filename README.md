@@ -1,0 +1,6 @@
+# Express-Sequelize
+
+---
+
+###Boiler Plate
+
