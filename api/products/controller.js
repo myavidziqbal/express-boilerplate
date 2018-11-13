@@ -7,6 +7,7 @@ exports.getAll = (req, res) => {
     .catch(err => console.log(err));
 };
 
+//insert data---------------------
 exports.post = (req, res) => {
   models.products
     .create(req.body)
@@ -21,6 +22,10 @@ exports.deleteOne = (req, res) => {
     .then(result => res.send(result))
     .catch(err => res.send(err));
 };
+
+// exports.deleteAll = (req, res) => {
+//   models.products
+// }
 
 exports.search = (req, res) => {
   models.products
